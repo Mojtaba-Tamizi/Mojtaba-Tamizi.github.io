@@ -1,0 +1,47 @@
+/* Print-friendly styles */
+    @page {
+      size: auto;
+      margin: 12mm;
+    }
+
+    html, body {
+      background: white !important;
+      color: #000 !important;
+      font-size: 12pt;
+    }
+
+    .container {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+    }
+
+    .profile, .card {
+      box-shadow: none !important;
+      background: transparent !important;
+      border: none !important;
+      padding: 0 0 8px 0 !important;
+    }
+
+    .avatar { display: none !important; }
+
+    .main {
+      display: block !important;
+    }
+
+    .sidebar {
+      display: block !important;
+      position: static !important;
+      margin: 8px 0 !important;
+    }
+
+    .card {
+      page-break-inside: avoid;
+    }
+
+    a::after { content: " (" attr(href) ")"; color: #000; text-decoration: none; }
+
+    .contact-item {
+      color: #000 !important;
+    }
