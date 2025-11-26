@@ -1,47 +1,55 @@
-/* Print-friendly styles */
-    @page {
-      size: auto;
-      margin: 12mm;
-    }
+@page {
+  margin: 14mm;
+}
 
-    html, body {
-      background: white !important;
-      color: #000 !important;
-      font-size: 12pt;
-    }
+* {
+  color: #000 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
 
-    .container {
-      max-width: 100%;
-      margin: 0;
-      padding: 0;
-      box-shadow: none;
-    }
+body {
+  font-size: 11pt;
+  line-height: 1.4;
+}
 
-    .profile, .card {
-      box-shadow: none !important;
-      background: transparent !important;
-      border: none !important;
-      padding: 0 0 8px 0 !important;
-    }
+.site-header,
+.btn,
+.image-note,
+.contact-links {
+  display: none !important;
+}
 
-    .avatar { display: none !important; }
+.shell,
+.hero,
+.section,
+.site-footer {
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+}
 
-    .main {
-      display: block !important;
-    }
+.hero-grid,
+.projects-grid {
+  display: block !important;
+}
 
-    .sidebar {
-      display: block !important;
-      position: static !important;
-      margin: 8px 0 !important;
-    }
+.hero-image img {
+  max-height: 160px;
+  object-fit: cover;
+}
 
-    .card {
-      page-break-inside: avoid;
-    }
+.experience-item,
+.project-card {
+  border: none !important;
+  padding: 0 !important;
+}
 
-    a::after { content: " (" attr(href) ")"; color: #000; text-decoration: none; }
+.section {
+  page-break-inside: avoid;
+}
 
-    .contact-item {
-      color: #000 !important;
-    }
+a::after {
+  content: " (" attr(href) ")";
+  font-size: 9pt;
+}
