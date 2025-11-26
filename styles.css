@@ -1,12 +1,13 @@
 :root {
   color-scheme: dark;
-  --bg: #05060b;
-  --bg-alt: #0c1424;
-  --card: #121829;
-  --text: #f5f7ff;
-  --muted: #b2bad6;
-  --accent: #3b82f6;
-  --accent-soft: #7ab1ff;
+  --bg: #0f0f0f;
+  --surface: #191919;
+  --card: #202020;
+  --highlight: #282828;
+  --text: #f2f2f2;
+  --muted: #a3a3a3;
+  --accent: #f59e0b;
+  --accent-soft: #fdba74;
   --border: rgba(255, 255, 255, 0.08);
   --shell: min(1100px, 92vw);
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -21,8 +22,8 @@
 html,
 body {
   margin: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.15), transparent 45%),
-    radial-gradient(circle at 80% 0%, rgba(58, 199, 226, 0.18), transparent 50%),
+  background: radial-gradient(circle at 20% 20%, rgba(245, 158, 11, 0.12), transparent 45%),
+    radial-gradient(circle at 80% 0%, rgba(40, 40, 40, 0.35), transparent 55%),
     var(--bg);
   color: var(--text);
   font-size: 18px;
@@ -53,7 +54,7 @@ a {
 
 .site-header {
   border-bottom: 1px solid var(--border);
-  background: rgba(5, 6, 11, 0.85);
+  background: rgba(18, 18, 18, 0.95);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -115,7 +116,7 @@ a {
   position: absolute;
   inset: -14px;
   border-radius: 28px;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.5), rgba(58, 199, 226, 0.25));
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.5), rgba(253, 186, 116, 0.3));
   filter: blur(24px);
   z-index: -1;
   opacity: 0.7;
@@ -160,7 +161,7 @@ a {
   padding: 0.75rem 1.6rem;
   border-radius: 999px;
   border: 1px solid transparent;
-  color: #071022;
+  color: #1d1205;
   background: linear-gradient(120deg, var(--accent), var(--accent-soft));
   font-weight: 600;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -186,6 +187,12 @@ a {
 
 .section {
   padding: 4.5rem 0;
+}
+
+.section:nth-of-type(even) {
+  background: var(--surface);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 
 .section h2 {
@@ -286,13 +293,14 @@ a {
 }
 
 .contact-links a {
-  color: var(--accent-soft);
+  color: var(--accent);
   font-weight: 600;
 }
 
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 2.5rem 0 3rem;
+  background: var(--highlight);
 }
 
 .site-footer .shell {
