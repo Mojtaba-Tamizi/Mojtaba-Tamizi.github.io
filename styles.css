@@ -397,10 +397,61 @@ h4 {
 .section {
   padding: clamp(3rem, 8vw, 6rem) 0;
   position: relative;
+  /* Unified flat background for all content sections (About, Experience, Education, Projects, Contact) */
+  background-color: var(--bg-secondary);
 }
 
 .section:nth-child(even) {
-  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  /* Keep even sections visually consistent with odd ones */
+  background-color: var(--bg-secondary);
+}
+
+.section h2 {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--warm-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-heading {
+  margin-bottom: 3rem;
+}
+
+.section-heading p {
+  color: var(--text-muted);
+  font-size: 1.125rem;
+  opacity: 0.3;
+  z-index: -1;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--transition-slow);
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.hero-image:hover img {
+  transform: scale(1.02);
+}
+
+/* ====== SECTIONS ====== */
+.section {
+  padding: clamp(3rem, 8vw, 6rem) 0;
+  position: relative;
+  /* Unified flat background for all content sections (About, Experience, Education, Projects, Contact) */
+  background-color: var(--bg-secondary);
+}
+
+.section:nth-child(even) {
+  /* Keep even sections visually consistent with odd ones */
+  background-color: var(--bg-secondary);
 }
 
 .section h2 {
